@@ -177,14 +177,11 @@ def root():
     return {
         "status": "online",
         "developer": DEVELOPER,
-        "backend": "PyArrow + HuggingFace HfFileSystem",
         "authentication": "API key required for lookup endpoints",
         "endpoints": {
             "number": "/key=<API_KEY>/number=<10-15 digit number>",
             "aadhar": "/key=<API_KEY>/aadhar=<12 digit Aadhaar>",
         },
-        "phone_index_parts": len(PHONE_FILES),
-        "aadhar_index_parts": len(AADHAAR_FILES),
     }
 
 
@@ -193,9 +190,6 @@ def health():
     return {
         "status": "ok",
         "developer": DEVELOPER,
-        "backend": "PyArrow + HuggingFace HfFileSystem",
-        "phone_index_parts": len(PHONE_FILES),
-        "aadhar_index_parts": len(AADHAAR_FILES),
     }
 
 
