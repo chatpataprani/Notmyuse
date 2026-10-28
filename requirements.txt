@@ -1,0 +1,5 @@
+fastapi
+uvicorn[standard]
+pyarrow
+huggingface_hub
+fsspec
